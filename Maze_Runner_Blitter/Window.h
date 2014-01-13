@@ -7,7 +7,7 @@ namespace Train2Game
 	class Window 
 	{
 		public:
-			Window(HINSTANCE pInstance, WNDPROC pHdlr, const std::wstring caption, int x, int y, int width, int height);
+			Window(HINSTANCE pInstance, WNDPROC pHdlr, const std::wstring pCaption, int pX, int pY, int pWidth, int pHeight);
 			~Window();
 			HWND GetHWND();
 			int GetWidth();
