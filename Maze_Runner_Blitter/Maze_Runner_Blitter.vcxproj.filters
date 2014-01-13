@@ -4,6 +4,9 @@
     <ClCompile Include="Main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>WIndow</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Algorithms">
@@ -11,6 +14,12 @@
     </Filter>
     <Filter Include="Main">
       <UniqueIdentifier>{6c310478-3368-4bb0-89e5-54511063cc4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WIndow">
+      <UniqueIdentifier>{2d3fcd17-f71d-4fc3-a103-c3b6755343ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{42f995f1-9679-4d8b-94e9-9aedb87e593b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -34,6 +43,9 @@
     </ClInclude>
     <ClInclude Include="Z:\T2GPorfolio01Project02\ScreenRenderer.h">
       <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>WIndow</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
