@@ -91,6 +91,15 @@
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Z:\T2GPorfolio01Project02\Cell.h" />
+    <ClInclude Include="Z:\T2GPorfolio01Project02\Character.h" />
+    <ClInclude Include="Z:\T2GPorfolio01Project02\Interface.h" />
+    <ClInclude Include="Z:\T2GPorfolio01Project02\Maze.h" />
+    <ClInclude Include="Z:\T2GPorfolio01Project02\nodes.h" />
+    <ClInclude Include="Z:\T2GPorfolio01Project02\Pathfinder.h" />
+    <ClInclude Include="Z:\T2GPorfolio01Project02\ScreenRenderer.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
