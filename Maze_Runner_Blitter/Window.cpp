@@ -1,4 +1,5 @@
 #include "Window.h"
+#include "Error.h"
 
 namespace Train2Game
 {
@@ -20,8 +21,9 @@ namespace Train2Game
 		ATOM success = RegisterClass(&mWindowClass);
 		if (!success)
 		{
-			
+			Error::DisplayError();
 		}
+
 		//Create the handle
 		mHWND = CreateWindow(mWindowClass.lpszClassName, pCaption.c_str(), WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX, pX, pY, pWidth, pHeight, GetDesktopWindow(), nullptr, mWindowClass.hInstance, nullptr);
 		if (mHWND == 0)
