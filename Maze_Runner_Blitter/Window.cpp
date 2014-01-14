@@ -15,10 +15,12 @@ namespace Train2Game
 		mWindowClass.hInstance = pInstance;
 		mWindowClass.lpszClassName = pCaption.c_str();
 
+
+		// Create the window itself
 		ATOM success = RegisterClass(&mWindowClass);
 		if (!success)
 		{
-			// 20:26
+			
 		}
 	}
 	

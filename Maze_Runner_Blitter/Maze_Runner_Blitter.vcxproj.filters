@@ -47,5 +47,8 @@
     <ClInclude Include="Window.h">
       <Filter>WIndow</Filter>
     </ClInclude>
+    <ClInclude Include="Error.h">
+      <Filter>Util</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
