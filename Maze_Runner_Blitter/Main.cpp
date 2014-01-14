@@ -23,9 +23,13 @@ int WINAPI WinMain(HINSTANCE pInstance, HINSTANCE pPrevInstance, PSTR pLpCmdLine
 
 	while (msg.message != WM_QUIT)
 	{
-		if (PeekMessage(&msg, window->GetHWND(), 0, 0, PM_REMOVE))
+		if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
 		{
 			DispatchMessage(&msg);
 		}
 	}
+
+	delete window;
+
+	return EXIT_SUCCESS;
 }
