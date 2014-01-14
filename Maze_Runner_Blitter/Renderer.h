@@ -13,7 +13,16 @@ namespace Train2Game
 	{
 	public:
 		Renderer(Window * pRenderWindow);
-		// 39:44
+		~Renderer();
+		void BeginFrame();
+		bool EndFrame();
+		void Initialise();
+		bool Reset();
+
+	private:
+		IDirect3D9 * mContext;
+		D3DPRESENT_PARAMETERS mPresentParameters;
+		IDirect3DDevice9 * mDevice;
 	};
 }
 
