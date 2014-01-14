@@ -22,6 +22,40 @@ namespace Train2Game
 		{
 			
 		}
+		//Create the handle
+		mHWND = CreateWindow(mWindowClass.lpszClassName, pCaption.c_str(), WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX, pX, pY, pWidth, pHeight, GetDesktopWindow(), nullptr, mWindowClass.hInstance, nullptr);
+		if (mHWND == 0)
+		{
+			Error::DisplayError();
+		}
+	}
+
+	// Cleanup
+	Window::~Window()
+	{
+		if (mHWND != 0)
+		{
+			DestroyWindow(mHWND);
+			mHWND = nullptr;
+		}
+		UnregisterClass(mWindowClass.lpszClassName, mWindowClass.hInstance);
+	}
+
+	HWND Window::GetHWND()
+	{
+		return mHWND;
+	}
+	int Window::GetWidth()
+	{
+		return mWidth;
+	}
+	int Window::GetHeight()
+	{
+		return mHeight;
+	}
+	void Window::Show()
+	{
+		ShowWindow(mHWND, SW_SHOWDEFAULT);
 	}
 	
 }
