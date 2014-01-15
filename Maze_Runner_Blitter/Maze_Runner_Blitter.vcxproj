@@ -92,6 +92,8 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Window.cpp" />
+    <ClCompile Include="Z:\T2GPorfolio01Project02\Cell.cpp" />
+    <ClCompile Include="Z:\T2GPorfolio01Project02\Maze.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Error.h" />

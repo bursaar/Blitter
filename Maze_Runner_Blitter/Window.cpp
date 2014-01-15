@@ -5,6 +5,8 @@ namespace Train2Game
 {
 	Window::Window(HINSTANCE pInstance, WNDPROC pHdlr, const std::wstring pCaption, int pX, int pY, int pWidth, int pHeight)
 	{
+		mWidth = pWidth;
+		mHeight = pHeight;
 		mWindowClass.style = 0;
 		mWindowClass.cbClsExtra = 0;
 		mWindowClass.cbWndExtra = 0;

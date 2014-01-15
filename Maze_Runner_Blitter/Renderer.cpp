@@ -5,7 +5,7 @@ namespace Train2Game
 {
 	Renderer::Renderer(Window * pRenderWindow)
 	{
-		mContext = Direct3DCreate9(D3DX_SDK_VERSION);
+		mContext = Direct3DCreate9(D3D_SDK_VERSION);
 
 		if (mContext == NULL)
 		{
@@ -16,7 +16,7 @@ namespace Train2Game
 		// D3D Swap Chain
 		mPresentParameters.BackBufferHeight = pRenderWindow->GetHeight();
 		mPresentParameters.BackBufferWidth = pRenderWindow->GetWidth();
-		mPresentParameters.BackBufferFormat = D3DFMT_A8B8G8R8;	//8 bit, four channels.
+		mPresentParameters.BackBufferFormat = D3DFMT_A8R8G8B8;	//8 bit, four channels.
 		mPresentParameters.BackBufferCount = 1;
 		mPresentParameters.MultiSampleType = D3DMULTISAMPLE_NONE;
 		mPresentParameters.MultiSampleQuality = 0;
@@ -75,18 +75,38 @@ namespace Train2Game
 
 		// Setting to perspective...
 		D3DXMATRIXA16 projectionMatrix;
-		// 55m 18s
+		D3DXMatrixPerspectiveFovLH(&projectionMatrix, D3DX_PI / 4.0f, (float)mPresentParameters.BackBufferHeight / (float)mPresentParameters.BackBufferHeight, 0.5f, 100.0f);
+		
+		mDevice->SetRenderState(D3DRS_LIGHTING, false);
+		mDevice->SetRenderState(D3DRS_SRCBLEND, D3DBLEND_SRCALPHA);
+		mDevice->SetRenderState(D3DRS_DESTBLEND, D3DBLEND_INVSRCALPHA);
+		mDevice->SetRenderState(D3DRS_ALPHABLENDENABLE, 1);
 	}
 	void Renderer::BeginFrame()
 	{
-
+		mDevice->Clear(0, NULL, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, 0, 1.0f, 0);
+		mDevice->BeginScene();
 	}
 	bool Renderer::EndFrame()
 	{
-
+		mDevice->EndScene();
+		HRESULT result = mDevice->Present(NULL, NULL, NULL, NULL);
+		if (result != S_OK)
+		{
+			if (result == D3DERR_DEVICELOST)
+			{
+				return false;
+			}
+			else
+			{
+				Error::DisplayError(result);
+			}
+		}
+		return true;
 	}
 	bool Renderer::Reset()
 	{
-
+		HRESULT g = mDevice->Reset(&mPresentParameters);
+		return (g == S_OK);
 	}
 }

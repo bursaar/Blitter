@@ -1,5 +1,6 @@
 #include <Windows.h>
 #include "Window.h"
+#include "Renderer.h"
 
 LRESULT CALLBACK messageHandler(HWND pHWND, UINT pMsg, WPARAM pWparam, LPARAM pLparam)
 {
@@ -16,6 +17,7 @@ LRESULT CALLBACK messageHandler(HWND pHWND, UINT pMsg, WPARAM pWparam, LPARAM pL
 int WINAPI WinMain(HINSTANCE pInstance, HINSTANCE pPrevInstance, PSTR pLpCmdLine, INT pCmdShow)
 {
 	Train2Game::Window * window = new Train2Game::Window(pInstance, messageHandler, TEXT("Train2Game Portfolio 1 Project 2 ~ Ben Keenan CD9000002O"), 100, 100, 600, 600);
+	Train2Game::Renderer * renderer = new Train2Game::Renderer(window);
 	window->Show();
 
 	MSG msg;
@@ -27,8 +29,32 @@ int WINAPI WinMain(HINSTANCE pInstance, HINSTANCE pPrevInstance, PSTR pLpCmdLine
 		{
 			DispatchMessage(&msg);
 		}
+
+		renderer->BeginFrame();
+
+		// draw all the things
+
+		if (!renderer->EndFrame())
+		{
+			while (!renderer->Reset() && msg.message != WM_QUIT)
+			{
+				if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
+				{
+					DispatchMessage(&msg);
+				}
+				Sleep(16);
+			}
+
+			if (msg.message == WM_QUIT)
+			{
+				break;
+			}
+
+			renderer->Initialise();
+		}
 	}
 
+	delete renderer;
 	delete window;
 
 	return EXIT_SUCCESS;
