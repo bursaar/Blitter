@@ -7,6 +7,9 @@
     <ClCompile Include="Window.cpp">
       <Filter>WIndow</Filter>
     </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Algorithms">
@@ -20,6 +23,9 @@
     </Filter>
     <Filter Include="Util">
       <UniqueIdentifier>{42f995f1-9679-4d8b-94e9-9aedb87e593b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering">
+      <UniqueIdentifier>{f6110f04-a908-4cf0-b601-c2c438ea7768}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +55,9 @@
     </ClInclude>
     <ClInclude Include="Error.h">
       <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Rendering</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
