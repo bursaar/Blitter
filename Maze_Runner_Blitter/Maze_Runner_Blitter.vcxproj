@@ -41,7 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(IncludePath);$(DXSDK_DIR)Include;C:\Users\Ben\Dropbox\Train2Game\Portfolios\Portfolio 1\Project 2\Maze_Runner - VS from Xcode\Maze_Runner - VS from Xcode;C:\Users\Ben\Dropbox\Train2Game\Portfolios\Portfolio 1\Project 2\Maze_Runner_Blitter\Maze_Runner_Blitter</IncludePath>
+    <IncludePath>$(IncludePath);$(DXSDK_DIR)Include</IncludePath>
     <LibraryPath>$(LibraryPath);$(DXSDK_DIR)Lib\x86</LibraryPath>
     <ReferencePath>$(IncludePath);$(DXSDK_DIR)include;$(ReferencePath)</ReferencePath>
     <IntDir>$(Configuration)\bin\$(Configuration)\obj</IntDir>
@@ -90,12 +90,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Error.h" />
-    <ClInclude Include="Renderer.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="Z:\T2GPorfolio01Project02\Cell.h" />
     <ClInclude Include="Z:\T2GPorfolio01Project02\Character.h" />

@@ -1,6 +1,5 @@
 #pragma once
 #include <Windows.h>
-#include <dxErr.h>
 
 namespace Train2Game {
 
@@ -19,12 +18,6 @@ namespace Train2Game {
 			LocalFree(lpMsgBuf);
 
 			ExitProcess(error);
-		}
-
-		static void DisplayError(HRESULT result)
-		{
-			MessageBox(NULL, DXGetErrorString(result), TEXT("DirectX Error"), MB_OK | MB_ICONERROR);
-			ExitProcess(result);
 		}
 	};
 }
