@@ -44,13 +44,13 @@
     <IncludePath>$(IncludePath);$(DXSDK_DIR)Include;C:\Users\Ben\Dropbox\Train2Game\Portfolios\Portfolio 1\Project 2\Maze_Runner - VS from Xcode\Maze_Runner - VS from Xcode;C:\Users\Ben\Dropbox\Train2Game\Portfolios\Portfolio 1\Project 2\Maze_Runner_Blitter\Maze_Runner_Blitter</IncludePath>
     <LibraryPath>$(LibraryPath);$(DXSDK_DIR)Lib\x86</LibraryPath>
     <ReferencePath>$(IncludePath);$(DXSDK_DIR)include;$(ReferencePath)</ReferencePath>
-    <IntDir>$(Configuration)\bin\$(Configuration)\obj</IntDir>
+    <IntDir>$(Configuration)\bin\$(Configuration)\obj\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <ReferencePath>$(IncludePath);$(DXSDK_DIR)include;$(ReferencePath)</ReferencePath>
     <LibraryPath>$(LibraryPath);$(DXSDK_DIR)Lib\x86</LibraryPath>
-    <IntDir>$(Configuration)\bin\$(Configuration)\obj</IntDir>
+    <IntDir>$(Configuration)\bin\$(Configuration)\obj\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
