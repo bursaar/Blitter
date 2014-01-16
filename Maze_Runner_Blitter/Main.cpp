@@ -36,6 +36,7 @@ int WINAPI WinMain(HINSTANCE pInstance, HINSTANCE pPrevInstance, PSTR pLpCmdLine
 
 		//Draw stuff here
 
+
 		if (!renderer->EndFrame())
 		{
 			while (!renderer->Reset() && msg.message != WM_QUIT)
