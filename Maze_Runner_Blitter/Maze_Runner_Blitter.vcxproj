@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Error.h" />
+    <ClInclude Include="Writing.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="Z:\T2GPorfolio01Project02\Cell.h" />
