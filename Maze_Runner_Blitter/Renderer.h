@@ -6,6 +6,8 @@
 #include <d3d9.h>
 #include <d3dx9.h>
 #include <ddraw.h>
+#include <d3dx9tex.h>
+#include <d3dx9core.h>
 
 
 namespace Train2Game

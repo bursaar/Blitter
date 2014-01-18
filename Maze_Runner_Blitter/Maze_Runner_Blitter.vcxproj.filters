@@ -33,6 +33,9 @@
     <Filter Include="Rendering">
       <UniqueIdentifier>{f6110f04-a908-4cf0-b601-c2c438ea7768}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sprites">
+      <UniqueIdentifier>{2a8f228b-270b-4381-8b66-1ac90a534ec9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Z:\T2GPorfolio01Project02\Cell.h">
@@ -68,5 +71,22 @@
     <ClInclude Include="Writing.h">
       <Filter>Rendering</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\Sprites - Exported\MR_BG_Border.png">
+      <Filter>Sprites</Filter>
+    </Image>
+    <Image Include="..\..\Sprites - Exported\MR_BG_Grid.png">
+      <Filter>Sprites</Filter>
+    </Image>
+    <Image Include="..\..\Sprites - Exported\MR_BG_White.png">
+      <Filter>Sprites</Filter>
+    </Image>
+    <Image Include="..\..\Sprites - Exported\MR_Spritesheet_Cells.png">
+      <Filter>Sprites</Filter>
+    </Image>
+    <Image Include="..\..\Sprites - Exported\MR_Spritesheet_Chars.png">
+      <Filter>Sprites</Filter>
+    </Image>
   </ItemGroup>
 </Project>

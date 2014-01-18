@@ -108,6 +108,13 @@
     <ClInclude Include="Z:\T2GPorfolio01Project02\Pathfinder.h" />
     <ClInclude Include="Z:\T2GPorfolio01Project02\ScreenRenderer.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\Sprites - Exported\MR_BG_Border.png" />
+    <Image Include="..\..\Sprites - Exported\MR_BG_Grid.png" />
+    <Image Include="..\..\Sprites - Exported\MR_BG_White.png" />
+    <Image Include="..\..\Sprites - Exported\MR_Spritesheet_Cells.png" />
+    <Image Include="..\..\Sprites - Exported\MR_Spritesheet_Chars.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
