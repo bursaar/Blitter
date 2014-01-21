@@ -41,7 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(IncludePath);$(DXSDK_DIR)Include;C:\Users\Ben\Dropbox\Train2Game\Portfolios\Portfolio 1\Project 2\Maze_Runner - VS from Xcode\Maze_Runner - VS from Xcode;C:\Users\Ben\Dropbox\Train2Game\Portfolios\Portfolio 1\Project 2\Maze_Runner_Blitter\Maze_Runner_Blitter</IncludePath>
+    <IncludePath>$(IncludePath);$(DXSDK_DIR)Include;C:\Users\Ben\Dropbox\Train2Game\Portfolios\Portfolio 1\Project 2\Maze_Runner - VS from Xcode\Maze_Runner - VS from Xcode;C:\Users\Ben\Dropbox\Train2Game\Portfolios\Portfolio 1\Project 2\Maze_Runner_Blitter\Maze_Runner_Blitter;C:\Users\Ben\Dropbox\Train2Game\Portfolios\Portfolio 1\Project 2\Xcode\Checked Out Repos\T2GPorfolio01Project02</IncludePath>
     <LibraryPath>$(LibraryPath);$(DXSDK_DIR)Lib\x86</LibraryPath>
     <ReferencePath>$(IncludePath);$(DXSDK_DIR)include;$(ReferencePath)</ReferencePath>
     <IntDir>$(Configuration)\bin\$(Configuration)\obj\</IntDir>
@@ -58,7 +58,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
@@ -76,7 +76,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
@@ -89,6 +89,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="LevelLoader.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Window.cpp" />
@@ -96,7 +97,9 @@
     <ClCompile Include="Z:\T2GPorfolio01Project02\Maze.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CompilerSettings.h" />
     <ClInclude Include="Error.h" />
+    <ClInclude Include="LevelLoader.h" />
     <ClInclude Include="Writing.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="Window.h" />

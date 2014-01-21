@@ -16,6 +16,9 @@
     <ClCompile Include="Z:\T2GPorfolio01Project02\Maze.cpp">
       <Filter>Algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="LevelLoader.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Algorithms">
@@ -70,6 +73,12 @@
     </ClInclude>
     <ClInclude Include="Writing.h">
       <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelLoader.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="CompilerSettings.h">
+      <Filter>Util</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
