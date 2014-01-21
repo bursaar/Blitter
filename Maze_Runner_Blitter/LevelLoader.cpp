@@ -16,10 +16,10 @@ int cLevelLoader::LoadLevel(const char pFilename[15])
 		return 1;	// Empty file error
 	}
 	
-
+	return 0;
 }
 
 int cLevelLoader::SaveLevel(char pFilename[15])
 {
-
+	return 0;
 }
