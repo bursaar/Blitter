@@ -33,7 +33,7 @@ int WINAPI WinMain(HINSTANCE pInstance, HINSTANCE pPrevInstance, PSTR pLpCmdLine
 		}
 
 		renderer->BeginFrame();
-
+		/*
 		//Draw stuff here
 		string str_path_whiteBg = "MR_BG_White.png";
 		LPDIRECT3DTEXTURE9 BG_White;
@@ -50,6 +50,8 @@ int WINAPI WinMain(HINSTANCE pInstance, HINSTANCE pPrevInstance, PSTR pLpCmdLine
 			[in]  const D3DXVECTOR3 *pPosition,
 			[in]  D3DCOLOR Color
 			);
+
+			*/
 
 		if (!renderer->EndFrame())
 		{
