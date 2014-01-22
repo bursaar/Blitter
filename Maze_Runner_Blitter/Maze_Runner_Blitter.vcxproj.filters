@@ -39,6 +39,9 @@
     <Filter Include="Sprites">
       <UniqueIdentifier>{2a8f228b-270b-4381-8b66-1ac90a534ec9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Maze Data">
+      <UniqueIdentifier>{5707c951-cb8a-463c-8313-421e5bb9aaaf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Z:\T2GPorfolio01Project02\Cell.h">
