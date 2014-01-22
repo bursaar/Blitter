@@ -1,5 +1,6 @@
 #include "Renderer.h"
 #include "Error.h"
+#include <Vertex.h>
 
 namespace Train2Game
 {
@@ -81,6 +82,8 @@ namespace Train2Game
 		mDevice->SetRenderState(D3DRS_SRCBLEND, D3DBLEND_SRCALPHA);
 		mDevice->SetRenderState(D3DRS_DESTBLEND, D3DBLEND_INVSRCALPHA);
 		mDevice->SetRenderState(D3DRS_ALPHABLENDENABLE, 1);
+
+		mDevice->SetFVF(Vertex::FORMAT);
 	}
 	void Renderer::BeginFrame()
 	{
@@ -108,5 +111,40 @@ namespace Train2Game
 	{
 		HRESULT g = mDevice->Reset(&mPresentParameters);
 		return (g == S_OK);
+	}
+	IDirect3DTexture9 * Renderer::LoadTexture(LPCWSTR fileName)
+	{
+		std::wstring path = std::wstring(fileName);
+
+		if (textureCache.count(fileName) == 0)
+		{
+			IDirect3DTexture9 * texture;
+			HRESULT result = D3DXCreateTextureFromFile(mDevice, fileName, &texture);
+			if (result != S_OK)
+			{
+				Error::DisplayError(result);
+			}
+
+			textureCache[fileName] = texture;
+			textureUsageCount[fileName] = 1;
+		}
+		else
+		{
+			textureUsageCount[fileName]++;
+			return textureCache[fileName];
+		}
+	}
+	void Renderer::ReleaseTexture(LPCWSTR fileName)
+	{
+		if (textureCache.count(fileName) != 0)
+		{
+			textureUsageCount[fileName]--;
+			if (textureUsageCount[fileName] < 1)
+			{
+				textureCache[fileName]->Release();
+				textureUsageCount.erase(fileName);
+				textureCache.erase(fileName);
+			}
+		}
 	}
 }

@@ -99,7 +99,10 @@
   <ItemGroup>
     <ClInclude Include="CompilerSettings.h" />
     <ClInclude Include="Error.h" />
+    <ClInclude Include="iRenderable.h" />
     <ClInclude Include="LevelLoader.h" />
+    <ClInclude Include="Vector2D.h" />
+    <ClInclude Include="Vertex.h" />
     <ClInclude Include="Writing.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="Window.h" />
