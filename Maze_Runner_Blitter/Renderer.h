@@ -9,6 +9,8 @@
 #include <d3dx9tex.h>
 #include <d3dx9core.h>
 #include <map>
+#include "Vertex.h"
+#include "Vector2D.h"
 
 
 namespace Train2Game
@@ -24,6 +26,8 @@ namespace Train2Game
 		bool Reset();
 		IDirect3DTexture9 * LoadTexture(LPCWSTR fileName);
 		void ReleaseTexture(LPCWSTR fileName);
+		IDirect3DVertexBuffer9 * CreateVertexBuffer(std::vector<Vertex> vertices);		// The vector calls elements with pointers
+		void Draw(IDirect3DVertexBuffer9 * vertexBuffer, IDirect3DTexture9 * texture, Vector2D &scale, Vector2D &position, float rotation);
 
 	private:
 		IDirect3D9 * mContext;

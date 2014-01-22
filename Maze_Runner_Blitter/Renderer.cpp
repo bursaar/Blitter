@@ -1,6 +1,7 @@
 #include "Renderer.h"
 #include "Error.h"
-#include <Vertex.h>
+#include "Vertex.h"
+#include "Vector2D.h"
 
 namespace Train2Game
 {
@@ -127,6 +128,7 @@ namespace Train2Game
 
 			textureCache[fileName] = texture;
 			textureUsageCount[fileName] = 1;
+			return texture;
 		}
 		else
 		{
@@ -146,5 +148,39 @@ namespace Train2Game
 				textureCache.erase(fileName);
 			}
 		}
+	}
+	IDirect3DVertexBuffer9 * Renderer::CreateVertexBuffer(std::vector<Vertex> vertices)
+	{
+		IDirect3DVertexBuffer9 * vertexBuffer;
+		HRESULT result = mDevice->CreateVertexBuffer(sizeof(Vertex)* vertices.size(), D3DUSAGE_WRITEONLY, Vertex::FORMAT, D3DPOOL_DEFAULT, &vertexBuffer, NULL);
+		if (result != S_OK) Error::DisplayError(result);
+
+		void * bufferMemory;
+
+		vertexBuffer->Lock(0, sizeof(Vertex)* vertices.size(), &bufferMemory, NULL);
+		memcpy(bufferMemory, &vertices[0], sizeof(Vertex)* vertices.size());
+		vertexBuffer->Unlock();
+
+		return vertexBuffer;
+	}
+
+	void Renderer::Draw(IDirect3DVertexBuffer9 * vertexBuffer, IDirect3DTexture9 * texture, Vector2D &position, Vector2D &scale, float rotation)
+	{
+		D3DXMATRIXA16 baseMatrix, worldMatrix, scaleMatrix, translateMatrix, rotateMatrix;
+
+		mDevice->GetTransform(D3DTS_WORLD, &baseMatrix);
+
+		worldMatrix = baseMatrix * *D3DXMatrixRotationZ(&rotateMatrix, rotation) * *D3DXMatrixScaling(&scaleMatrix, (float)scale.x, (float)scale.y, 0.01f) * *D3DXMatrixTranslation(&translateMatrix, (float)position.x, (float)position.y, 0.0f);
+		
+		mDevice->SetTransform(D3DTS_WORLD, &worldMatrix);
+
+		mDevice->SetStreamSource(0, vertexBuffer, 0, Vertex::STRIDE_SIZE);
+
+		mDevice->SetTexture(0, texture);
+
+		mDevice->DrawPrimitive(D3DPT_TRIANGLESTRIP, 0, 2);
+
+		mDevice->SetTransform(D3DTS_WORLD, &baseMatrix);
+
 	}
 }

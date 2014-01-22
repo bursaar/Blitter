@@ -19,6 +19,9 @@
     <ClCompile Include="LevelLoader.cpp">
       <Filter>Algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="ParticleEmitter.cpp">
+      <Filter>Render Objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Algorithms">
@@ -41,6 +44,9 @@
     </Filter>
     <Filter Include="Maze Data">
       <UniqueIdentifier>{5707c951-cb8a-463c-8313-421e5bb9aaaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render Objects">
+      <UniqueIdentifier>{1f601506-2259-42b2-a6d5-f8453976fff2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +97,9 @@
     </ClInclude>
     <ClInclude Include="iRenderable.h">
       <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleEmitter.h">
+      <Filter>Render Objects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

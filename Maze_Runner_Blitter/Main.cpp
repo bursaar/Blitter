@@ -4,6 +4,7 @@
 #include <Writing.h>
 #include <iostream>
 #include <fstream>
+#include "ParticleEmitter.h"
 
 using namespace std;
 
@@ -53,7 +54,9 @@ int WINAPI WinMain(HINSTANCE pInstance, HINSTANCE pPrevInstance, PSTR pLpCmdLine
 
 	Train2Game::Window * window = new Train2Game::Window(pInstance, messageHandler, TEXT("Train2Game Portfolio 1 Project 2 ~ Ben Keenan CD9000002O"), 150, 100, 640, 480);
 	Train2Game::Renderer * renderer = new Train2Game::Renderer(window);
+	Train2Game::cParticleEmitter * pe = new Train2Game::cParticleEmitter();
 	window->Show();
+	pe->Initialise(renderer);
 
 	MSG msg;
 	ZeroMemory(&msg, sizeof(msg));
@@ -67,7 +70,7 @@ int WINAPI WinMain(HINSTANCE pInstance, HINSTANCE pPrevInstance, PSTR pLpCmdLine
 
 		renderer->BeginFrame();
 
-		// Draw stuff here
+		pe->Render();
 
 		if (!renderer->EndFrame())
 		{
@@ -86,8 +89,11 @@ int WINAPI WinMain(HINSTANCE pInstance, HINSTANCE pPrevInstance, PSTR pLpCmdLine
 			}
 
 			renderer->Initialise();
+			pe->Resume();
 		}
 	}
+
+	delete pe;
 
 	delete renderer;
 	delete window;

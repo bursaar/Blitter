@@ -49,11 +49,38 @@ class IRenderable
 			virtual void Initialise(Train2Game::Renderer * pRenderer)
 			{
 				mRenderer = pRenderer;
-				mVertexBuffer = pRender->CreateVertexBuffer(vertices);
+				mVertexBuffer = pRenderer->CreateVertexBuffer(vertices);
 				mIsInitialised = true;
 			}
+			void SetTexture(LPCWSTR fileName)
+			{
+				mTexture = mRenderer->LoadTexture(fileName);
+				mTextureName = std::wstring(fileName);
+			}
+			virtual void Render()
+			{
+				if (!mIsInitialised)
+				{
+					return;
+				}
+				if (mActive)
+				{
+					mRenderer->Draw(mVertexBuffer, mTexture, mPosition, mScale, mRotation);
+				}
+			}
+			void SetPosition(double x, double y)
+			{
+				mPosition.x = x;
+				mPosition.y = y;
+			}
+			void SetVelocity(double x, double y)
+			{
+				mVelocity.x = x;
+				mVelocity.y = y;
+			}
 
-	private:
+
+	protected:
 		bool mIsInitialised;
 		std::wstring mTextureName;
 		Train2Game::Renderer * mRenderer;

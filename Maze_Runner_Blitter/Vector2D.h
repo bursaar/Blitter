@@ -1,10 +1,11 @@
 #pragma once
+#include <vector>
 
 namespace Train2Game
 {
 	struct Vector2D
 	{
-		doubl x;
+		double x;
 		double y;
 
 		Vector2D(double pX, double pY)
