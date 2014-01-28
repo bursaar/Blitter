@@ -16,6 +16,6 @@ namespace Train2Game
 		mScale.x = 2.1f;
 		mScale.y = 2.1f;
 
-		SetTexture(TEXT("..\Sprites - Exported\MR_BG_Border.png"));
+		SetTexture(TEXT("..\..\SpritesExported\MR_BG_White.png"));
 	}
 }

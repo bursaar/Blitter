@@ -10,17 +10,17 @@
     <ClCompile Include="Renderer.cpp">
       <Filter>Rendering</Filter>
     </ClCompile>
-    <ClCompile Include="Z:\T2GPorfolio01Project02\Cell.cpp">
-      <Filter>Algorithms</Filter>
+    <ClCompile Include="ParticleEmitter.cpp">
+      <Filter>Render Objects</Filter>
     </ClCompile>
-    <ClCompile Include="Z:\T2GPorfolio01Project02\Maze.cpp">
+    <ClCompile Include="Cell.cpp">
       <Filter>Algorithms</Filter>
     </ClCompile>
     <ClCompile Include="LevelLoader.cpp">
       <Filter>Algorithms</Filter>
     </ClCompile>
-    <ClCompile Include="ParticleEmitter.cpp">
-      <Filter>Render Objects</Filter>
+    <ClCompile Include="Maze.cpp">
+      <Filter>Algorithms</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -50,27 +50,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Z:\T2GPorfolio01Project02\Cell.h">
-      <Filter>Algorithms</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\T2GPorfolio01Project02\Character.h">
-      <Filter>Algorithms</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\T2GPorfolio01Project02\Interface.h">
-      <Filter>Algorithms</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\T2GPorfolio01Project02\Maze.h">
-      <Filter>Algorithms</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\T2GPorfolio01Project02\nodes.h">
-      <Filter>Algorithms</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\T2GPorfolio01Project02\Pathfinder.h">
-      <Filter>Algorithms</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\T2GPorfolio01Project02\ScreenRenderer.h">
-      <Filter>Algorithms</Filter>
-    </ClInclude>
     <ClInclude Include="Window.h">
       <Filter>WIndow</Filter>
     </ClInclude>
@@ -82,9 +61,6 @@
     </ClInclude>
     <ClInclude Include="Writing.h">
       <Filter>Rendering</Filter>
-    </ClInclude>
-    <ClInclude Include="LevelLoader.h">
-      <Filter>Algorithms</Filter>
     </ClInclude>
     <ClInclude Include="CompilerSettings.h">
       <Filter>Util</Filter>
@@ -101,21 +77,42 @@
     <ClInclude Include="ParticleEmitter.h">
       <Filter>Render Objects</Filter>
     </ClInclude>
+    <ClInclude Include="Cell.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelLoader.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="Maze.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinder.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenRenderer.h">
+      <Filter>Algorithms</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\Sprites - Exported\MR_BG_Border.png">
+    <Image Include="..\..\SpritesExported\MR_BG_Border.png">
       <Filter>Sprites</Filter>
     </Image>
-    <Image Include="..\..\Sprites - Exported\MR_BG_Grid.png">
+    <Image Include="..\..\SpritesExported\MR_BG_Grid.png">
       <Filter>Sprites</Filter>
     </Image>
-    <Image Include="..\..\Sprites - Exported\MR_BG_White.png">
+    <Image Include="..\..\SpritesExported\MR_BG_White.png">
       <Filter>Sprites</Filter>
     </Image>
-    <Image Include="..\..\Sprites - Exported\MR_Spritesheet_Cells.png">
+    <Image Include="..\..\SpritesExported\MR_Spritesheet_Cells.png">
       <Filter>Sprites</Filter>
     </Image>
-    <Image Include="..\..\Sprites - Exported\MR_Spritesheet_Chars.png">
+    <Image Include="..\..\SpritesExported\MR_Spritesheet_Chars.png">
       <Filter>Sprites</Filter>
     </Image>
   </ItemGroup>
