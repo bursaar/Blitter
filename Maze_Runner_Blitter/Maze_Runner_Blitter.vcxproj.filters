@@ -100,19 +100,19 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\SpritesExported\MR_BG_Border.png">
+    <Image Include="Debug\bin\Debug\Sprites\MR_BG_Border.png">
       <Filter>Sprites</Filter>
     </Image>
-    <Image Include="..\..\SpritesExported\MR_BG_Grid.png">
+    <Image Include="Debug\bin\Debug\Sprites\MR_BG_Grid.png">
       <Filter>Sprites</Filter>
     </Image>
-    <Image Include="..\..\SpritesExported\MR_BG_White.png">
+    <Image Include="Debug\bin\Debug\Sprites\MR_BG_White.png">
       <Filter>Sprites</Filter>
     </Image>
-    <Image Include="..\..\SpritesExported\MR_Spritesheet_Cells.png">
+    <Image Include="Debug\bin\Debug\Sprites\MR_Spritesheet_Cells.png">
       <Filter>Sprites</Filter>
     </Image>
-    <Image Include="..\..\SpritesExported\MR_Spritesheet_Chars.png">
+    <Image Include="Debug\bin\Debug\Sprites\MR_Spritesheet_Chars.png">
       <Filter>Sprites</Filter>
     </Image>
   </ItemGroup>

@@ -116,11 +116,11 @@
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\SpritesExported\MR_BG_Border.png" />
-    <Image Include="..\..\SpritesExported\MR_BG_Grid.png" />
-    <Image Include="..\..\SpritesExported\MR_BG_White.png" />
-    <Image Include="..\..\SpritesExported\MR_Spritesheet_Cells.png" />
-    <Image Include="..\..\SpritesExported\MR_Spritesheet_Chars.png" />
+    <Image Include="Debug\bin\Debug\Sprites\MR_BG_Border.png" />
+    <Image Include="Debug\bin\Debug\Sprites\MR_BG_Grid.png" />
+    <Image Include="Debug\bin\Debug\Sprites\MR_BG_White.png" />
+    <Image Include="Debug\bin\Debug\Sprites\MR_Spritesheet_Cells.png" />
+    <Image Include="Debug\bin\Debug\Sprites\MR_Spritesheet_Chars.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
