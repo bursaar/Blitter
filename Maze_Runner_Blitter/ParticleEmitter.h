@@ -3,7 +3,7 @@
 
 namespace Train2Game
 {
-	class cParticleEmitter : public IRenderable
+	class cBackground : public IRenderable
 	{
 		public:
 			void Initialise(Renderer * pRenderer) override;

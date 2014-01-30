@@ -2,7 +2,7 @@
 
 namespace Train2Game
 {
-	void cParticleEmitter::Initialise(Renderer * pRender)
+	void cBackground::Initialise(Renderer * pRender)
 	{
 		vertices.push_back(Vertex(-1.0f, 1.0f, -1.0f, 0xffffffff, 0.0f, 0.0f));
 		vertices.push_back(Vertex(1.0f, 1.0f, -1.0f, 0xffffffff, 1.0f, 0.0f));
@@ -18,4 +18,5 @@ namespace Train2Game
 
 		SetTexture(TEXT("Debug/bin/Debug/Sprites/MR_BG_White.png"));
 	}
+
 }

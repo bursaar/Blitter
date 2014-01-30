@@ -5,6 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include "ParticleEmitter.h"
+#include "Border.h"
 
 using namespace std;
 
@@ -54,9 +55,11 @@ int WINAPI WinMain(HINSTANCE pInstance, HINSTANCE pPrevInstance, PSTR pLpCmdLine
 
 	Train2Game::Window * window = new Train2Game::Window(pInstance, messageHandler, TEXT("Train2Game Portfolio 1 Project 2 ~ Ben Keenan CD9000002O"), 150, 100, 640, 480);
 	Train2Game::Renderer * renderer = new Train2Game::Renderer(window);
-	Train2Game::cParticleEmitter * pe = new Train2Game::cParticleEmitter();
+	Train2Game::cBackground * bg = new Train2Game::cBackground();
+	Train2Game::cBorder * br = new Train2Game::cBorder();
 	window->Show();
-	pe->Initialise(renderer);
+	bg->Initialise(renderer);
+	br->Initialise(renderer);
 
 	MSG msg;
 	ZeroMemory(&msg, sizeof(msg));
@@ -70,7 +73,8 @@ int WINAPI WinMain(HINSTANCE pInstance, HINSTANCE pPrevInstance, PSTR pLpCmdLine
 
 		renderer->BeginFrame();
 
-		pe->Render();
+		bg->Render();
+		br->Render();
 
 		if (!renderer->EndFrame())
 		{
@@ -89,11 +93,13 @@ int WINAPI WinMain(HINSTANCE pInstance, HINSTANCE pPrevInstance, PSTR pLpCmdLine
 			}
 
 			renderer->Initialise();
-			pe->Resume();
+			bg->Resume();
+			br->Resume();
 		}
 	}
 
-	delete pe;
+	delete bg;
+	delete br;
 
 	delete renderer;
 	delete window;

@@ -22,6 +22,9 @@
     <ClCompile Include="Maze.cpp">
       <Filter>Algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="Border.cpp">
+      <Filter>Render Objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Algorithms">
@@ -97,6 +100,9 @@
     </ClInclude>
     <ClInclude Include="ScreenRenderer.h">
       <Filter>Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="Border.h">
+      <Filter>Render Objects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

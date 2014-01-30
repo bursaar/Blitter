@@ -79,6 +79,8 @@ namespace Train2Game
 		D3DXMATRIXA16 projectionMatrix;
 		D3DXMatrixPerspectiveFovLH(&projectionMatrix, D3DX_PI / 4.0f, (float)mPresentParameters.BackBufferHeight / (float)mPresentParameters.BackBufferHeight, 0.5f, 100.0f);
 		
+		mDevice->SetTransform(D3DTS_PROJECTION, &projectionMatrix);
+
 		mDevice->SetRenderState(D3DRS_LIGHTING, false);
 		mDevice->SetRenderState(D3DRS_SRCBLEND, D3DBLEND_SRCALPHA);
 		mDevice->SetRenderState(D3DRS_DESTBLEND, D3DBLEND_INVSRCALPHA);

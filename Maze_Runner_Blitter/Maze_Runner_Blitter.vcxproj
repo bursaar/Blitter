@@ -89,6 +89,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Border.cpp" />
     <ClCompile Include="Cell.cpp" />
     <ClCompile Include="LevelLoader.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -98,6 +99,7 @@
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Border.h" />
     <ClInclude Include="Cell.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="CompilerSettings.h" />
