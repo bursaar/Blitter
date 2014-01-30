@@ -96,6 +96,7 @@
     <ClCompile Include="Maze.cpp" />
     <ClCompile Include="ParticleEmitter.cpp" />
     <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="Title.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +112,7 @@
     <ClInclude Include="ParticleEmitter.h" />
     <ClInclude Include="Pathfinder.h" />
     <ClInclude Include="ScreenRenderer.h" />
+    <ClInclude Include="Title.h" />
     <ClInclude Include="Vector2D.h" />
     <ClInclude Include="Vertex.h" />
     <ClInclude Include="Writing.h" />
@@ -118,6 +120,7 @@
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Debug\bin\Debug\Sprites\MazeRunnerTItle.png" />
     <Image Include="Debug\bin\Debug\Sprites\MR_BG_Border.png" />
     <Image Include="Debug\bin\Debug\Sprites\MR_BG_Grid.png" />
     <Image Include="Debug\bin\Debug\Sprites\MR_BG_White.png" />

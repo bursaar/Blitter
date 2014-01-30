@@ -25,6 +25,9 @@
     <ClCompile Include="Border.cpp">
       <Filter>Render Objects</Filter>
     </ClCompile>
+    <ClCompile Include="Title.cpp">
+      <Filter>Render Objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Algorithms">
@@ -104,6 +107,9 @@
     <ClInclude Include="Border.h">
       <Filter>Render Objects</Filter>
     </ClInclude>
+    <ClInclude Include="Title.h">
+      <Filter>Render Objects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Debug\bin\Debug\Sprites\MR_BG_Border.png">
@@ -119,6 +125,9 @@
       <Filter>Sprites</Filter>
     </Image>
     <Image Include="Debug\bin\Debug\Sprites\MR_Spritesheet_Chars.png">
+      <Filter>Sprites</Filter>
+    </Image>
+    <Image Include="Debug\bin\Debug\Sprites\MazeRunnerTItle.png">
       <Filter>Sprites</Filter>
     </Image>
   </ItemGroup>
