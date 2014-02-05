@@ -4,9 +4,6 @@
     <ClCompile Include="Main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
-    <ClCompile Include="Window.cpp">
-      <Filter>WIndow</Filter>
-    </ClCompile>
     <ClCompile Include="Renderer.cpp">
       <Filter>Rendering</Filter>
     </ClCompile>
@@ -27,6 +24,18 @@
     </ClCompile>
     <ClCompile Include="Title.cpp">
       <Filter>Render Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="D3DGraphics.cpp">
+      <Filter>WIndow</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>WIndow</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyboard.cpp">
+      <Filter>WIndow</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>WIndow</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -56,9 +65,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Window.h">
-      <Filter>WIndow</Filter>
-    </ClInclude>
     <ClInclude Include="Error.h">
       <Filter>Util</Filter>
     </ClInclude>
@@ -109,6 +115,21 @@
     </ClInclude>
     <ClInclude Include="Title.h">
       <Filter>Render Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="D3DGraphics.h">
+      <Filter>WIndow</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>WIndow</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyboard.h">
+      <Filter>WIndow</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>WIndow</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>WIndow</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -91,33 +91,40 @@
   <ItemGroup>
     <ClCompile Include="Border.cpp" />
     <ClCompile Include="Cell.cpp" />
+    <ClCompile Include="D3DGraphics.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="LevelLoader.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Maze.cpp" />
     <ClCompile Include="ParticleEmitter.cpp" />
     <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Title.cpp" />
-    <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Border.h" />
     <ClInclude Include="Cell.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="CompilerSettings.h" />
+    <ClInclude Include="D3DGraphics.h" />
     <ClInclude Include="Error.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="Interface.h" />
     <ClInclude Include="iRenderable.h" />
+    <ClInclude Include="Keyboard.h" />
     <ClInclude Include="LevelLoader.h" />
     <ClInclude Include="Maze.h" />
     <ClInclude Include="ParticleEmitter.h" />
     <ClInclude Include="Pathfinder.h" />
+    <ClInclude Include="Resource.h" />
     <ClInclude Include="ScreenRenderer.h" />
+    <ClInclude Include="Timer.h" />
     <ClInclude Include="Title.h" />
     <ClInclude Include="Vector2D.h" />
     <ClInclude Include="Vertex.h" />
     <ClInclude Include="Writing.h" />
     <ClInclude Include="Renderer.h" />
-    <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Debug\bin\Debug\Sprites\MazeRunnerTItle.png" />
