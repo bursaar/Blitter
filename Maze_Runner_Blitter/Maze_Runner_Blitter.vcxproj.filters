@@ -25,9 +25,6 @@
     <ClCompile Include="Title.cpp">
       <Filter>Render Objects</Filter>
     </ClCompile>
-    <ClCompile Include="D3DGraphics.cpp">
-      <Filter>WIndow</Filter>
-    </ClCompile>
     <ClCompile Include="Game.cpp">
       <Filter>WIndow</Filter>
     </ClCompile>
@@ -115,9 +112,6 @@
     </ClInclude>
     <ClInclude Include="Title.h">
       <Filter>Render Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="D3DGraphics.h">
-      <Filter>WIndow</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
       <Filter>WIndow</Filter>
